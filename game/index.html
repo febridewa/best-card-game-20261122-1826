@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember Court — Duel of the Ashen Isles</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="table"></div>
+  <div id="overlay"></div>
+  <div id="help"></div>
+</div>
+<script type="module" src="src/main.js"></script>
+<script>
+// Fit the fixed 1280x800 table into any desktop window.
+function fit() {
+  const app = document.getElementById('app');
+  const s = Math.min(window.innerWidth / 1280, window.innerHeight / 800, 1.4);
+  app.style.transform = 'scale(' + s + ')';
+}
+window.addEventListener('resize', fit);
+fit();
+</script>
+</body>
+</html>
